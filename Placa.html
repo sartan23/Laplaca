@@ -1,50 +1,53 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>La Placa</title>
+<title>validador placa</title>
 <script type="text/javascript">
-function subirM (exregular){ 
-  var m = document.getElementById("matricula").value;
+
+
+function placa(exregular){ 
+  var m = document.getElementById("placa").value;
   var expreg = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
   
   if(expreg.test(m))
-	alert("La matrícula es correcta"); 
+	alert("La placa es correcta"); 
   else 
-    alert("La matrícula NO es correcta");
+    alert("La placa NO es correcta");
 
-	
+	 document.getElementById('placa').value = "";
 } 
 
-function subirC(exregular) { 
-  var m = document.getElementById("matricula").value;
+
+function nombre(exregular) { 
+  var m = document.getElementById("nombre").value;
   var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
   
   if(exregular.test(m))
-	alert("La cedula es correcta"); 
+	alert("El nombre es correcto"); 
   else 
-    alert("La cedula solo debe contener numeros"); 
+    alert("El nombre debe contener solo letras"); 
+  document.getElementById('nombre').value = "";
 } 
 
-function subirCE() { 
-  var m = document.getElementById("matricula").value;
+function telefono(exregular) { 
+  var m = document.getElementById("telefono").value;
   var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
   
   if(exregular.test(m))
-  alert("La matrícula es correcta"); 
+  alert("El telefono es correcto"); 
   else 
-    alert("La matrícula NO es correcta"); 
+    alert("El telefono solo debe contener numeros"); 
+  document.getElementById('telefono').value = "";
 } 
-function subirNF(exregular) { 
-  var m = document.getElementById("matricula").value;
+function correo_Electronico(exregular) { 
+  var m = document.getElementById("correo_Electronico").value;
   var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
   
   if(exregular.test(m))
   alert("El correo es correcto"); 
   else 
-    alert("El correo debe tener un @ y un .com es correcta"); 
+    alert("El correo debe tener un @"); 
+  document.getElementById('correo_Electronico').value = "";
 } 
 
 
@@ -53,16 +56,23 @@ function subirNF(exregular) {
 </script>
 </head>
 <body>
-<form id="miForm" action="" method="get">
-<p>
-Nombre: <input type="text" id="matricula" /> <input type="button" value="subir" onclick="subirM()" />
-Telefono: <input type="text" id="cedula" />   <input type="button" value="subir" onclick="subirC()" />
-Correo electronico: <input type="text" id="correo" /> <input type="button" value="subir" onclick="subirCE()" />
-placa de vehiculo: <input type="text" id="numero_Fijo" /> <input type="button" value="subir" onclick="subirNF()" />
 
-<br />
-<input type="button" value="subir" onclick="subir()" />
-</p>
-</form>
+
+<div>
+  Nombre:   <input type="text" id="nombre" /> <input type="button" value="subir" onclick="nombre()" />
+</div>
+<div>
+  Telefono:  <input type="text" id="telefono" />   <input type="button" value="subir" onclick="telefono()" />
+</div>
+<div>
+  Correo electronico:  <input type="text" id="correo_Electronico" /> <input type="button" value="subir" onclick="correo_Electronico()" />
+</div>
+<div>
+placa de vehiculo:  <input type="text" id="placa" /> <input type="button" value="subir" onclick="placa()" />
+
+</div>
+
+
 </body>
 </html>
+
