@@ -7,7 +7,7 @@
 
 function placa(exregular){ 
   var m = document.getElementById("placa").value;
-  var expreg = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  var expreg = /(^[a-zA-Z]{3})+([0-9]{3})/;
   
   if(expreg.test(m))
 	alert("La placa es correcta"); 
@@ -20,7 +20,7 @@ function placa(exregular){
 
 function nombre(exregular) { 
   var m = document.getElementById("nombre").value;
-  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  var exregular = /^[a-zA-Z]*$/;
   
   if(exregular.test(m))
 	alert("El nombre es correcto"); 
@@ -31,7 +31,7 @@ function nombre(exregular) {
 
 function telefono(exregular) { 
   var m = document.getElementById("telefono").value;
-  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  var exregular = /^[0-9]*$/;
   
   if(exregular.test(m))
   alert("El telefono es correcto"); 
@@ -41,12 +41,12 @@ function telefono(exregular) {
 } 
 function correo_Electronico(exregular) { 
   var m = document.getElementById("correo_Electronico").value;
-  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  var exregular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/;
   
   if(exregular.test(m))
   alert("El correo es correcto"); 
   else 
-    alert("El correo debe tener un @"); 
+    alert("El correo debe tener un @ y un dominio (.com,co.es entre otros)"); 
   document.getElementById('correo_Electronico').value = "";
 } 
 
