@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>La Placa</title>
+<script type="text/javascript">
+function subirM (exregular){ 
+  var m = document.getElementById("matricula").value;
+  var expreg = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  
+  if(expreg.test(m))
+	alert("La matrícula es correcta"); 
+  else 
+    alert("La matrícula NO es correcta");
+
+	
+} 
+
+function subirC(exregular) { 
+  var m = document.getElementById("matricula").value;
+  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  
+  if(exregular.test(m))
+	alert("La cedula es correcta"); 
+  else 
+    alert("La cedula solo debe contener numeros"); 
+} 
+
+function subirCE() { 
+  var m = document.getElementById("matricula").value;
+  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  
+  if(exregular.test(m))
+  alert("La matrícula es correcta"); 
+  else 
+    alert("La matrícula NO es correcta"); 
+} 
+function subirNF(exregular) { 
+  var m = document.getElementById("matricula").value;
+  var exregular = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+  
+  if(exregular.test(m))
+  alert("El correo es correcto"); 
+  else 
+    alert("El correo debe tener un @ y un .com es correcta"); 
+} 
+
+
+
+
+</script>
+</head>
+<body>
+<form id="miForm" action="" method="get">
+<p>
+Nombre: <input type="text" id="matricula" /> <input type="button" value="subir" onclick="subirM()" />
+Telefono: <input type="text" id="cedula" />   <input type="button" value="subir" onclick="subirC()" />
+Correo electronico: <input type="text" id="correo" /> <input type="button" value="subir" onclick="subirCE()" />
+placa de vehiculo: <input type="text" id="numero_Fijo" /> <input type="button" value="subir" onclick="subirNF()" />
+
+<br />
+<input type="button" value="subir" onclick="subir()" />
+</p>
+</form>
+</body>
+</html>
